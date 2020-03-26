@@ -13,7 +13,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/first_page_image"
-        android:label="@string/app_name"
+        android:label="Help From Reliance"
         android:roundIcon="@drawable/first_page_image"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

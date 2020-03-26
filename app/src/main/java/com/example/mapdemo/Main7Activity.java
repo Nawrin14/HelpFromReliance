@@ -28,6 +28,7 @@ public class Main7Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main7);
+        this.setTitle("Profile");
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();

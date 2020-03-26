@@ -42,6 +42,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        this.setTitle("Sign Up");
 
         mail = (EditText) findViewById(R.id.setEmail);
         pass = (EditText) findViewById(R.id.setPassword);

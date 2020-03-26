@@ -35,7 +35,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
-        this.setTitle("Login");
+        this.setTitle("Sign In");
 
         firebaseAuth = FirebaseAuth.getInstance();
 
