@@ -5,10 +5,10 @@ Users can share their location by SMS through this android app by a single click
 "Help From Reliance" is a location-sharing app. Whenever users fall into any danger or meet with an accident, they can quickly send the current location to their relatives or friends to get help through this app. All they need to do is to click a button. The location will be sent automatically by SMS.
 
 # Functionalities
-At first, users will have to create an account to use this app. All the user information along with the home address and emergency contact numbers will be saved in the database. If the users can log in successfully, they will be able to send SMS in two ways. Firstly, they can send an SMS after confirming the current location. Secondly, they can send an SMS without confirming if they are in their home. In this case, the users home address will be retrieved from the database. The SMS will be sent to two emergency contact numbers saved previously in the user database. The users will also be able to see their user profile and log out from their account anytime. The user UI is designed based on a 5" device.
+At first, users will have to create an account to use this app. All the user information along with the home address and emergency contact numbers will be saved in the database. If the users can log in successfully, they will be able to send SMS in two ways. Firstly, they can send an SMS after confirming the current location. Secondly, they can send an SMS without confirming if they are at their home. In this case, the users home address will be retrieved from the database. The SMS will be sent to two emergency contact numbers saved previously in the user database. The users will also be able to see their user profile and log out from their account anytime.
 
 # Android Version
-The targeted android version for this app is Android 5.1 (Lollipop). The users can face difficulty to use this app in Android versions lower than 5.1 due to the Google Maps feature. 
+The targeted android version for this app is Android 5.1 (Lollipop). The users can face difficulty to use this app in Android versions lower than 5.1 due to the Google Maps feature. The UI is designed based on a 5" phone.
 
 N.B.    It is recommended to run the project in a real android device. The project can crush and work abnormally in the Android Emulator.
 
