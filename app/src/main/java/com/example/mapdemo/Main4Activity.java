@@ -44,7 +44,7 @@ public class Main4Activity extends AppCompatActivity implements View.OnClickList
     private FirebaseDatabase database;
     private FirebaseUser user;
     private boolean isPermission;
-    private String msgAddress1, msgAddress2, userCurrentAddress, userHomeAddress, userAddress, sentMsg, UID;
+    private String msgAddress1, msgAddress2, userCurrentAddress, userHomeAddress, sentMsg, UID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,14 +102,12 @@ public class Main4Activity extends AppCompatActivity implements View.OnClickList
                         MY_PERMISSIONS_REQUEST_SEND_SMS);
 
             } else if(userCurrentAddress != null) {
-                userAddress = userCurrentAddress;
-                sentMsg = "I need your help. My current location is " + userAddress;
+                sentMsg = "I need your help. My current location is " + userCurrentAddress;
                 sendMessage();
             }
 
             else{
-                userAddress = userHomeAddress;
-                sentMsg = "I need your help. My current location is " + userAddress;
+                sentMsg = "I need your help. My current location is " + userHomeAddress;
                 sendMessage();
             }
 
@@ -118,10 +116,13 @@ public class Main4Activity extends AppCompatActivity implements View.OnClickList
         else if(v==confirmFirst){
             Intent newIntent = new Intent(Main4Activity.this,Main6Activity.class);
             startActivity(newIntent);
+            finish();
         }
+
         else if(v==profile){
             Intent newIntent = new Intent(Main4Activity.this,Main7Activity.class);
             startActivity(newIntent);
+            finish();
         }
 
         else{

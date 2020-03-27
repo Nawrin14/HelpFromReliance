@@ -9,19 +9,19 @@
     tools:context=".Main7Activity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/userLogo"
         android:layout_width="match_parent"
         android:layout_height="123dp"
         app:srcCompat="@drawable/login_image" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textColor="@color/colorBlack"
         android:text="User Profile" />
 
@@ -30,20 +30,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:textSize="20dp"/>
+        android:textSize="15dp"/>
 
     <TextView
         android:id="@+id/currentEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:textSize="20dp"/>
+        android:textSize="15dp"/>
 
     <TextView
         android:id="@+id/curretAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:textSize="20dp"/>
+        android:textSize="15dp"/>
 
 </LinearLayout>

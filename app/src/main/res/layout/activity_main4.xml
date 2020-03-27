@@ -8,31 +8,39 @@
     tools:context=".Main4Activity">
 
     <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="413dp"
-        android:layout_x="-3dp"
-        android:layout_y="3dp"
+        android:id="@+id/helpmeLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="355dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
         app:srcCompat="@drawable/home_page_image" />
 
     <ImageView
         android:id="@+id/currentProfile"
-        android:layout_width="101dp"
+        android:layout_width="64dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
-        android:layout_x="3dp"
-        android:layout_y="18dp"
+        android:layout_x="9dp"
+        android:layout_y="15dp"
         android:clickable="true"
         app:srcCompat="@drawable/user_profile_image" />
+
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="50dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="50dp"
+        android:layout_x="295dp"
+        android:layout_y="15dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/logout_image" />
 
     <Button
         android:id="@+id/sendMsgButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="150dp"
-        android:layout_x="58dp"
-        android:layout_y="481dp"
+        android:layout_x="32dp"
+        android:layout_y="430dp"
         android:background="@color/colorLightPink"
         android:text="Send Alert" />
 
@@ -42,19 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
-        android:layout_x="57dp"
-        android:layout_y="572dp"
+        android:layout_x="32dp"
+        android:layout_y="520dp"
         android:background="@color/colorLightPink"
         android:text="Confirm Location" />
-
-    <ImageView
-        android:id="@+id/logout"
-        android:layout_width="50dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="50dp"
-        android:layout_x="303dp"
-        android:layout_y="18dp"
-        android:clickable="true"
-        app:srcCompat="@drawable/logout_image" />
 
 </AbsoluteLayout>

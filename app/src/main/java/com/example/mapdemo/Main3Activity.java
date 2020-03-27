@@ -53,6 +53,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
         if(v==signUp) {
             Intent newIntent = new Intent(Main3Activity.this, Main2Activity.class);
             startActivity(newIntent);
+            finish();
         }
 
         else if(v==login){

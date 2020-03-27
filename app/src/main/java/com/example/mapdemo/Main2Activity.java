@@ -91,7 +91,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
                                         Intent intent = new Intent(Main2Activity.this, Main3Activity.class);
                                         startActivity(intent);
-
+                                        finish();
                                         Toast.makeText(Main2Activity.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
                                     }
                                 });

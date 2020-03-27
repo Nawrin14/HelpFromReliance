@@ -9,17 +9,51 @@
     tools:context=".Main2Activity">
 
     <EditText
+        android:id="@+id/setName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:inputType="textPersonName"
+        android:hint="Full Name" />
+
+    <EditText
         android:id="@+id/setEmail"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
+        android:inputType="textEmailAddress"
         android:hint="Email" />
+
+    <EditText
+        android:id="@+id/setHomeAddress"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:textSize="18dp"
+        android:inputType="text"
+        android:hint="Home"/>
+
+    <EditText
+        android:id="@+id/emergencyContact1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:inputType="phone"
+        android:hint="Emergency Contact Number 1" />
+
+    <EditText
+        android:id="@+id/emergencyContact2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:inputType="phone"
+        android:hint="Emergency Contact Number 2" />
 
     <EditText
         android:id="@+id/setPassword"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="380dp"
         android:inputType="textPassword"
         android:hint="Password" />
 
@@ -27,38 +61,9 @@
         android:id="@+id/confirmPassword"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="430dp"
         android:inputType="textPassword"
         android:hint="Confirm Password" />
-
-    <EditText
-        android:id="@+id/setName"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:hint="Full Name" />
-
-    <EditText
-        android:id="@+id/emergencyContact1"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="230dp"
-        android:hint="Emergency Contact Number 1" />
-
-    <EditText
-        android:id="@+id/emergencyContact2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
-        android:hint="Emergency Contact Number 2" />
-
-    <EditText
-        android:id="@+id/setHomeAddress"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="430dp"
-        android:textSize="18dp"
-        android:hint="Home"/>
 
     <Button
         android:id="@+id/registerButton"
@@ -70,7 +75,7 @@
         android:text="Sign Up" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/userLogo"
         android:layout_width="300dp"
         android:layout_height="100dp"
         app:srcCompat="@drawable/login_image" />
