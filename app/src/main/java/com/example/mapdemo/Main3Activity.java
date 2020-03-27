@@ -16,13 +16,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
 public class Main3Activity extends AppCompatActivity implements View.OnClickListener {
 
@@ -50,13 +43,11 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        if(v==signUp) {
+        if (v == signUp) {
             Intent newIntent = new Intent(Main3Activity.this, Main2Activity.class);
             startActivity(newIntent);
             finish();
-        }
-
-        else if(v==login){
+        } else if (v == login) {
             loginUser();
         }
     }
@@ -76,17 +67,16 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
 
                             Intent intent = new Intent(Main3Activity.this, Main4Activity.class);
-                            intent.putExtra("mail",email);
+                            intent.putExtra("mail", email);
                             startActivity(intent);
                             finish();
-                        }
-                        else {
+                        } else {
                             Toast.makeText(getApplicationContext(), "Login failed! Please try again later", Toast.LENGTH_SHORT).show();
                         }
                     }
-         });
+                });
     }
 }

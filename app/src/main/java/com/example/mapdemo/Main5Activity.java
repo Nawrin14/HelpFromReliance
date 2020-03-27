@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 
-import com.example.mapdemo.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -25,7 +24,7 @@ public class Main5Activity extends AppCompatActivity {
 
     private void nextActivity() {
 
-        new CountDownTimer(3000,1000){
+        new CountDownTimer(3000, 1000) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -35,7 +34,7 @@ public class Main5Activity extends AppCompatActivity {
             @Override
             public void onFinish() {
 
-                if(user!=null)
+                if (user != null)
                     newIntent = new Intent(Main5Activity.this, Main4Activity.class);
                 else
                     newIntent = new Intent(Main5Activity.this, Main3Activity.class);

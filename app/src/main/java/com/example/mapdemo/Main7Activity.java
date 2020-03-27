@@ -3,9 +3,9 @@ package com.example.mapdemo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -59,5 +59,12 @@ public class Main7Activity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent newIntent = new Intent(Main7Activity.this, Main4Activity.class);
+        startActivity(newIntent);
+        finish();
     }
 }

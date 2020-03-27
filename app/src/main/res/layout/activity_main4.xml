@@ -20,7 +20,7 @@
         android:layout_width="64dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
-        android:layout_x="9dp"
+        android:layout_x="7dp"
         android:layout_y="15dp"
         android:clickable="true"
         app:srcCompat="@drawable/user_profile_image" />
@@ -30,7 +30,7 @@
         android:layout_width="50dp"
         android:layout_height="51dp"
         android:layout_marginTop="50dp"
-        android:layout_x="295dp"
+        android:layout_x="300dp"
         android:layout_y="15dp"
         android:clickable="true"
         app:srcCompat="@drawable/logout_image" />

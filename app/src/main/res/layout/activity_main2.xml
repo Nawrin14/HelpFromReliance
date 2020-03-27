@@ -13,65 +13,57 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="130dp"
-        android:inputType="textPersonName"
-        android:hint="Full Name" />
+        android:hint="Full Name"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/setEmail"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
-        android:inputType="textEmailAddress"
-        android:hint="Email" />
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/setHomeAddress"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="230dp"
-        android:textSize="18dp"
+        android:hint="Home"
         android:inputType="text"
-        android:hint="Home"/>
+        android:textSize="18dp" />
 
     <EditText
         android:id="@+id/emergencyContact1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
-        android:inputType="phone"
-        android:hint="Emergency Contact Number 1" />
+        android:hint="Emergency Contact Number 1"
+        android:inputType="phone" />
 
     <EditText
         android:id="@+id/emergencyContact2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="330dp"
-        android:inputType="phone"
-        android:hint="Emergency Contact Number 2" />
+        android:hint="Emergency Contact Number 2"
+        android:inputType="phone" />
 
     <EditText
         android:id="@+id/setPassword"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="380dp"
-        android:inputType="textPassword"
-        android:hint="Password" />
-
-    <EditText
-        android:id="@+id/confirmPassword"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="430dp"
-        android:inputType="textPassword"
-        android:hint="Confirm Password" />
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:gravity="center"
+        android:layout_marginTop="480dp"
         android:background="@color/colorLightBlue"
+        android:gravity="center"
         android:text="Sign Up" />
 
     <ImageView

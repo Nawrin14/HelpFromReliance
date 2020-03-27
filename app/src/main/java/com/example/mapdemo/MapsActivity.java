@@ -39,6 +39,7 @@ import com.karumi.dexter.listener.single.PermissionListener;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, LocationListener, View.OnClickListener {
@@ -64,7 +65,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         confirmLocation = (Button) findViewById(R.id.confirmButton);
 
-        if(requestSinglePermission()){
+        if (requestSinglePermission()) {
             SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.map);
             mapFragment.getMapAsync(this);
@@ -104,7 +105,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private boolean checkLocation() {
 
-        if(!isLocationEnabled()){
+        if (!isLocationEnabled()) {
             showAlert();
         }
 
@@ -113,14 +114,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void showAlert() {
 
-        Toast.makeText(this,"Enable Location!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Turn your device location on", Toast.LENGTH_SHORT).show();
 
     }
 
     private boolean isLocationEnabled() {
 
         locationmanager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        return locationmanager.isProviderEnabled(LocationManager.GPS_PROVIDER)||
+        return locationmanager.isProviderEnabled(LocationManager.GPS_PROVIDER) ||
                 locationmanager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
     }
 
@@ -128,18 +129,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        if(latLng!=null){
+        if (latLng != null) {
             mMap.addMarker(new MarkerOptions().position(latLng).title("Marker in Current Location"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,14F));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 14F));
         }
     }
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
 
-        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!=
-                PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,Manifest.permission.
-                ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
+                PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.
+                ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
             return;
         }
@@ -147,7 +148,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startLocationUpdates();
         mLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleAPIClient);
 
-        if(mLocation == null)
+        if (mLocation == null)
             startLocationUpdates();
 
     }
@@ -157,14 +158,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mLocationRequest = LocationRequest.create().setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(update_interval).setFastestInterval(fastest_interval);
 
-        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!=
-                PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,Manifest.permission.
-                ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
+                PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.
+                ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
             return;
         }
 
-        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleAPIClient,mLocationRequest,this);
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleAPIClient, mLocationRequest, this);
 
     }
 
@@ -193,7 +194,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onStart() {
         super.onStart();
 
-        if(mGoogleAPIClient!=null)
+        if (mGoogleAPIClient != null)
             mGoogleAPIClient.connect();
     }
 
@@ -201,7 +202,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onStop() {
         super.onStop();
 
-        if(mGoogleAPIClient.isConnected())
+        if (mGoogleAPIClient.isConnected())
             mGoogleAPIClient.disconnect();
     }
 
@@ -212,23 +213,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         String fullAddress;
 
         try {
-            address = geocoder.getFromLocation(mLocation.getLatitude(),mLocation.getLongitude(),1);
+            address = geocoder.getFromLocation(mLocation.getLatitude(), mLocation.getLongitude(), 1);
             String addresses = address.get(0).getAddressLine(0);
             String area = address.get(0).getLocality();
             //String city = address.get(0).getAdminArea();
             //String country = address.get(0).getCountryName();
             //String postalCode = address.get(0).getPostalCode();
 
-            fullAddress = addresses+" "+area;
+            fullAddress = addresses + " " + area;
 
-            Intent newIntent = new Intent(MapsActivity.this,Main4Activity.class);
+            Intent newIntent = new Intent(MapsActivity.this, Main4Activity.class);
             newIntent.putExtra("address", fullAddress);
             startActivity(newIntent);
             finish();
+            Toast.makeText(MapsActivity.this, "Location confirmed", Toast.LENGTH_SHORT).show();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent newIntent = new Intent(MapsActivity.this, Main4Activity.class);
+        startActivity(newIntent);
+        finish();
     }
 }

@@ -2,13 +2,13 @@ package com.example.mapdemo;
 
 public class credentials {
 
-    public String email,fullname,number1,address, password, number2;
+    public String email, fullname, number1, address, password, number2;
 
     public credentials() {
 
     }
 
-    public credentials(String fullname, String email , String number1, String number2, String address, String password) {
+    public credentials(String fullname, String email, String number1, String number2, String address, String password) {
         this.email = email;
         this.fullname = fullname;
         this.number1 = number1;
@@ -17,7 +17,9 @@ public class credentials {
         this.password = password;
     }
 
-    public String getEmail() { return email; }
+    public String getEmail() {
+        return email;
+    }
 
     public void setEmail(String email) {
         this.email = email;

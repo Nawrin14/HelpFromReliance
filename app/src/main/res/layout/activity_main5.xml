@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorLightBlue"
+    android:orientation="vertical"
     tools:context=".Main5Activity">
 
     <TableRow
@@ -19,8 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="300dp"
             android:padding="50dp"
-            android:src="@drawable/first_page_image">
-        </ImageView>
+            android:src="@drawable/first_page_image"></ImageView>
 
     </TableRow>
 
@@ -34,11 +33,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="50dp"
-            android:textStyle="italic"
+            android:text="HELP\nFROM\nRELIANCE"
             android:textColor="@color/colorPrimaryDark"
-            android:text="HELP\nFROM\nRELIANCE">
-        </TextView>
+            android:textSize="50dp"
+            android:textStyle="italic"></TextView>
 
     </TableRow>
 
@@ -51,8 +49,7 @@
         <ProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ProgressBar>
+            android:layout_height="wrap_content"></ProgressBar>
 
     </TableRow>
 
