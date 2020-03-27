@@ -5,7 +5,10 @@ Users can share their location by SMS through this android app by a single click
 # Lab Section : A2
 
 # Description
-"Help From Reliance" is a location-sharing app. Whenever users fall into any danger or meet with an accident, they can quickly send the current location to their relatives or friends to get help through this app. All they need to do is to click a button. The location will be sent automatically by SMS.
+"Help From Reliance" is a location-sharing app developed in android studio. Whenever users fall into any danger or meet with an accident, they can quickly send the current location to their relatives or friends to get help through this app. All they need to do is to click a button. The location will be sent automatically by SMS.
+
+# Instructions
+The project can be run on android studio. Also, the apk file is available under the releases tab. You can download it to use the app on your mobile.
 
 # Functionalities
 At first, users will have to create an account to use this app. All the user information along with the home address and emergency contact numbers will be saved in the database. If the users can log in successfully, they will be able to send SMS in two ways. Firstly, they can send an SMS after confirming the current location. Secondly, they can send an SMS without confirming if they are at their home. In this case, the users home address will be retrieved from the database. The SMS will be sent to two emergency contact numbers saved previously in the user database. The users will also be able to see their user profile and log out from their account anytime.
