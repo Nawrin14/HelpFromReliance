@@ -18,6 +18,9 @@ The targeted android version for this app is Android 5.1 (Lollipop) and above. T
 # Additional Bindings
 1.  Firebase Database: The project is connected to the Firebase Database. All the user information will be saved in a Firebase Realtime Database.
 
-2.  Google Map: Google Map API has been used in this app to fetch the user's current location and to show the location in the Google Map. The user will have to permit the app to access the device's location. The location information should also be enabled to get the current location of the user.
+2.  Google Map: A free version of Google Map API has been used in this app to fetch the user's current location and to show the location in the Google Map. The user will have to permit the app to access the device's location. The location information should also be enabled to get the current location of the user.
 
 3.  SMS Manager: This project uses the SMS Manager API to send message through the app. The user will have to permit the app to send an SMS from the device. 
+
+# Update
+Due to the change in Google Maps API's billing policy, the Google Map integrated with this app will not work anymore. So, the users will not be able to confirm their current location through Google Map. The remaining features work perfectly. 
